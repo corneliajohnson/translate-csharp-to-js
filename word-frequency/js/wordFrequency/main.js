@@ -2,6 +2,7 @@ function main() {
   const text = getText().replace(/[^a-zA-Z ]/g, "");
   const words = text.split(" ");
   const freqCounts = {};
+  let count = 0;
 
   for (const word of words) {
     if (word.trim() === "") {
@@ -16,6 +17,7 @@ function main() {
   }
 
   // Printing a C# Dictionary might not be this easy.
+  console.log(Object.keys(freqCounts).length);
   console.log(freqCounts);
 }
 
